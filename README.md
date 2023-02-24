@@ -6,7 +6,6 @@ Purrfect Planner es una aplicación web para la gestión de citas veterinarias d
 
 - Programa citas con veterinarios
 - Registra el historial médico de tu mascota
-- Recibe recordatorios de citas por correo electrónico o mensaje de texto
 - Gestiona varias mascotas en una sola cuenta
 
 ## Tecnologías utilizadas
@@ -23,8 +22,10 @@ Purrfect Planner es una aplicación web para la gestión de citas veterinarias d
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="36" height="36" />
   </a>
-- Styled Components 💅
-  
+- Styled Components
+  <a href="https://styled-components.com/" target="_blank" rel="noreferrer">
+  <img src="https://styled-components.com/logo.png" alt="styled-component" width="36" height="36" />
+  </a>
 
 ## ¿Cómo empezar?
 
