@@ -1,54 +1,64 @@
-import React, { Fragment } from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import Formulario from './Componentes/Formulario';
+import ListaCitas from './Componentes/ListaCitas';
 
-import Cita from "./Componentes/Cita.jsx";
-import Formulario from "./Componentes/Formulario.jsx";
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  margin: 20px;
 
-function App() {
-  let listaCitas = JSON.parse(localStorage.getItem("citas"));
-  if (!listaCitas) {
-    listaCitas = [];
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export default function App() {
+  // Citas en local storage
+  let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+  if (!citasIniciales) {
+    citasIniciales = [];
   }
 
-  const [citas, setCitas] = useState(listaCitas);
+  // Array de citas
+  const [citas, setCitas] = useState(citasIniciales);
 
+  // useEffect para realizar ciertas operaciones cuando el state cambia
   useEffect(() => {
-    if (listaCitas) {
-      localStorage.setItem("citas", JSON.stringify(citas));
-    } else {
-      localStorage.setItem("citas", JSON.stringify([]));
-    }
-  }, [citas, listaCitas]);
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'));
 
+    if (citasIniciales) {
+      localStorage.setItem('citas', JSON.stringify(citas));
+    } else {
+      localStorage.setItem('citas', JSON.stringify([]));
+    }
+  }, [citas]);
+
+  // Funcion que tome las citas actuales y agregue la nueva
   const crearCita = (cita) => {
-    setCitas([...citas, cita]);
+    setCitas([
+      ...citas,
+      cita
+    ]);
   };
 
+  // Funcion que elimina una cita por su id
   const eliminarCita = (id) => {
     const nuevasCitas = citas.filter((cita) => cita.id !== id);
     setCitas(nuevasCitas);
   };
 
-  const mensaje =
-    citas.length === 0 ? "No hay citas" : "Administrar tus citas pendientes";
   return (
-    <Fragment>
-      <h1>Administrador de Pacientes</h1>
-      <div className="container">
-        <div className="row">
-          <div className="one-half column">
-            <Formulario crearCita={crearCita} />
-          </div>
-          <div className="one-half column">
-            <h2>{mensaje}</h2>
-            {citas.map((cita) => (
-              <Cita key={cita.id} cita={cita} eliminarCita={eliminarCita} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </Fragment>
+    <div>
+      <header>
+        <h1>Administrador de pacientes</h1>
+      </header>
+
+      <Container>
+        <Formulario crearCita={crearCita} />
+        <ListaCitas citas={citas} eliminarCita={eliminarCita} />
+      </Container>
+    </div>
   );
 }
-
-export default App;

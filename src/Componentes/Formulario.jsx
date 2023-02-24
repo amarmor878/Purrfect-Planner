@@ -1,40 +1,40 @@
-import React, { Fragment } from 'react';
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import FormularioWrapper from '../Estilos/FormuStyled'
 
-export default function Formulario({ crearCita }) {
+const Formulario = ({ crearCita }) => {
 
     const [cita, setCita] = useState({
         mascota: '',
         duenio: '',
         fecha: '',
         hora: '',
-        sintomas: '',
+        sintomas: ''
     });
 
     const [error, setError] = useState(false);
 
-    const handleChange = (e) => {
+    const handleChange = e => {
         setCita({
-            ...cita, [e.target.name]: e.target.value
-        })
-    }
+            ...cita,
+            [e.target.name]: e.target.value
+        });
+    };
 
     const { mascota, duenio, fecha, hora, sintomas } = cita;
 
-    const enviarCita = (e) => {
+    const enviarCita = e => {
         e.preventDefault();
 
         if (mascota.trim() === '' || duenio.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
-            setError(true)
+            setError(true);
             return;
         }
 
         setError(false);
 
-        crearCita({
-            ...cita, id: Date.now()
-        });
+        cita.id = Date.now();
+
+        crearCita(cita);
 
         setCita({
             mascota: '',
@@ -42,19 +42,18 @@ export default function Formulario({ crearCita }) {
             fecha: '',
             hora: '',
             sintomas: ''
-        })
-    }
+        });
+    };
 
     return (
-        <Fragment>
+        <FormularioWrapper>
             <h2>Crear cita</h2>
-            {error ? <p className='alerta-error'>Todos los campos son obligatorios</p> : null}
+            {error ? <p>Todos los campos son obligatorios</p> : null}
             <form onSubmit={enviarCita}>
                 <label>Nombre Mascota</label>
                 <input
                     type="text"
                     name="mascota"
-                    className="u-full-width"
                     placeholder="Nombre Mascota"
                     onChange={handleChange}
                     value={mascota}
@@ -63,7 +62,6 @@ export default function Formulario({ crearCita }) {
                 <input
                     type="text"
                     name="duenio"
-                    className="u-full-width"
                     placeholder="Nombre Dueño"
                     onChange={handleChange}
                     value={duenio}
@@ -72,7 +70,6 @@ export default function Formulario({ crearCita }) {
                 <input
                     type="date"
                     name="fecha"
-                    className="u-full-width"
                     onChange={handleChange}
                     value={fecha}
                 />
@@ -80,23 +77,19 @@ export default function Formulario({ crearCita }) {
                 <input
                     type="time"
                     name="hora"
-                    className="u-full-width"
                     onChange={handleChange}
                     value={hora}
                 />
                 <label>Sintomas</label>
                 <textarea
-                    className="u-full-width"
                     name='sintomas'
                     onChange={handleChange}
                     value={sintomas}
                 ></textarea>
-                <button type='submit' className="u-full-width button-primary">Agregar Cita</button>
+                <button type='submit'>Agregar Cita</button>
             </form>
-        </Fragment>
-    )
-}
+        </FormularioWrapper>
+    );
+};
 
-Formulario.propTypes = {
-    crearCita: PropTypes.func.isRequired
-}
+export default Formulario;
