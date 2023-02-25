@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Formulario from './Componentes/Formulario';
 import ListaCitas from './Componentes/ListaCitas';
+import LogoContainer from './Estilos/LogoContainerStyled';
 
 const Container = styled.div`
   display: grid;
@@ -52,9 +53,11 @@ export default function App() {
   return (
     <div>
       <header>
-        <h1>Administrador de pacientes</h1>
+        <LogoContainer>
+          <img src="https://img.icons8.com/cotton/64/null/cat--v2.png" alt='Gato gris'/>
+          <h1>Purrfect Planner</h1>
+        </LogoContainer>
       </header>
-
       <Container>
         <Formulario crearCita={crearCita} />
         <ListaCitas citas={citas} eliminarCita={eliminarCita} />

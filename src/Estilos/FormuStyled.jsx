@@ -4,11 +4,17 @@ const FormularioWrapper = styled.div`
   margin: 2rem 0;
   padding: 2rem;
   border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0.5px 0.5px 5px;
+  background-color: whitesmoke;
 
-  h2 {
+  h2, h3 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
     text-align: center;
+  }
+
+  h3 span{
+    color: #008CBA;
   }
 
   label {
@@ -19,7 +25,7 @@ const FormularioWrapper = styled.div`
 
   input[type='text'],
   input[type='date'],
-  input[type='time'],
+  input[type='email'],
   textarea {
     width: 100%;
     padding: 0.5rem;

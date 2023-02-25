@@ -7,7 +7,7 @@ const Cita = ({ cita, eliminarCita }) => {
             <Campo>Mascota: <span>{cita.mascota}</span></Campo>
             <Campo>Dueño: <span>{cita.duenio}</span></Campo>
             <Campo>Fecha: <span>{cita.fecha}</span></Campo>
-            <Campo>Hora: <span>{cita.hora}</span></Campo>
+            <Campo>Email: <span>{cita.mail}</span></Campo>
             <Campo>Síntomas: <span>{cita.sintomas}</span></Campo>
             <Campo><BotonEliminar onClick={() => eliminarCita(cita.id)}>Eliminar</BotonEliminar></Campo>
         </CitaContenedor>

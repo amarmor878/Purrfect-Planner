@@ -5,8 +5,8 @@ import { ListaContenedor } from '../Estilos/ListaStyled';
 export default function ListaCitas({ citas, eliminarCita }) {
     return (
         <ListaContenedor>
-            <h2>Administra tus citas</h2>
-
+            <h2>Listado de Pacientes</h2>
+            <h3>Administrar tus <span>Pacientes y Citas</span></h3>
             {citas.length === 0
                 ? <p>No hay citas</p>
                 : citas.map((cita) => (

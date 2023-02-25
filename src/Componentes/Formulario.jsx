@@ -7,7 +7,7 @@ const Formulario = ({ crearCita }) => {
         mascota: '',
         duenio: '',
         fecha: '',
-        hora: '',
+        mail: '',
         sintomas: ''
     });
 
@@ -20,12 +20,12 @@ const Formulario = ({ crearCita }) => {
         });
     };
 
-    const { mascota, duenio, fecha, hora, sintomas } = cita;
+    const { mascota, duenio, fecha, mail, sintomas } = cita;
 
     const enviarCita = e => {
         e.preventDefault();
 
-        if (mascota.trim() === '' || duenio.trim() === '' || fecha.trim() === '' || hora.trim() === '' || sintomas.trim() === '') {
+        if (mascota.trim() === '' || duenio.trim() === '' || fecha.trim() === '' || mail.trim() === '' || sintomas.trim() === '') {
             setError(true);
             return;
         }
@@ -40,14 +40,15 @@ const Formulario = ({ crearCita }) => {
             mascota: '',
             duenio: '',
             fecha: '',
-            hora: '',
+            mail: '',
             sintomas: ''
         });
     };
 
     return (
         <FormularioWrapper>
-            <h2>Crear cita</h2>
+            <h2>Seguimiento del paciente</h2>
+            <h3>Añade Pacientes y <span>Administralos</span></h3>
             {error ? <p>Todos los campos son obligatorios</p> : null}
             <form onSubmit={enviarCita}>
                 <label>Nombre Mascota</label>
@@ -73,16 +74,18 @@ const Formulario = ({ crearCita }) => {
                     onChange={handleChange}
                     value={fecha}
                 />
-                <label>Hora</label>
+                <label>Email</label>
                 <input
-                    type="time"
-                    name="hora"
+                    type="email"
+                    name="mail"
+                    placeholder="Correo del dueño"
                     onChange={handleChange}
-                    value={hora}
+                    value={mail}
                 />
                 <label>Sintomas</label>
                 <textarea
                     name='sintomas'
+                    placeholder="Sintomas que presenta el animal"
                     onChange={handleChange}
                     value={sintomas}
                 ></textarea>
