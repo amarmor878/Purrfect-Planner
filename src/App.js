@@ -6,12 +6,14 @@ import LogoContainer from './Estilos/LogoContainerStyled';
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 20px;
   margin: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1135px) {
     grid-template-columns: 1fr;
+    // Cambia esta línea
+    grid-auto-rows: minmax(100px, auto);
   }
 `;
 
@@ -54,7 +56,7 @@ export default function App() {
     <div>
       <header>
         <LogoContainer>
-          <img src="https://img.icons8.com/cotton/64/null/cat--v2.png" alt='Gato gris'/>
+          <img src="https://img.icons8.com/cotton/64/null/cat--v2.png" alt='Gato gris' />
           <h1>Purrfect Planner</h1>
         </LogoContainer>
       </header>
