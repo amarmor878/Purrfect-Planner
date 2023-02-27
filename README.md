@@ -2,7 +2,6 @@
 
 ![Logo de Purrfect Planner](https://user-images.githubusercontent.com/100948149/221548576-d17bc00e-6bfa-4718-a25e-d3a56f2556f5.png)
 
-
 ## Índice
 1. ¿Qué es Purrfect Planner?
 2. Despliegue de la app
@@ -32,9 +31,7 @@ Para utilizar Purrfect Planner, simplemente debes crear una cuenta en la platafo
 
 Aquí te mostramos algunas capturas de pantalla de la aplicación:
 
-![Captura de pantalla de Purrfect Planner](https://www.example.com/captura1.png)
-
-![Captura de pantalla de Purrfect Planner](https://www.example.com/captura2.png)
+<img src="https://user-images.githubusercontent.com/100948149/221549244-98e00052-c6b4-4ac1-bb05-485f106f6d66.png" alt="captura 1" width="600" height="281"/><img src="https://user-images.githubusercontent.com/100948149/221549529-94df0c86-9f11-486f-9ca6-161d936c5b97.png" alt="captura 2" width="600" height="281"/><img src="https://user-images.githubusercontent.com/100948149/221549840-dfcb2929-f57b-401c-857b-9a880d64ee79.png" alt="captura 3" width="600" height="281"/>
 
 ## Bibliografía
 
@@ -43,6 +40,6 @@ Aquí te mostramos algunas capturas de pantalla de la aplicación:
 
 ## Derechos de autor
 
-Copyright © [Año]
+Copyright © 2023
 
-Todos los derechos reservados. Este programa es software propietario. Puede ser modificado y/o distribuido bajo los términos de la [Licencia de Software Propietario](https://www.example.com/licencia). Cualquier uso no autorizado de este software, incluyendo la copia y la redistribución en su totalidad o en parte, será considerado una violación de los derechos de autor.
+Todos los derechos reservados. Este programa es software propietario. Puede ser modificado y/o distribuido bajo los términos de la [Licencia de Software Propietario](https://es.wikipedia.org/wiki/Licencia_de_software#:~:text=Licencia%20de%20software%20de%20c%C3%B3digo%20cerrado.%20Estas%20licencias,general%20cualquier%20otra%20consideraci%C3%B3n%20que%20se%20estime%20necesaria.). Cualquier uso no autorizado de este software, incluyendo la copia y la redistribución en su totalidad o en parte, será considerado una violación de los derechos de autor.
