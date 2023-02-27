@@ -1,21 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import Formulario from './Componentes/Formulario';
 import ListaCitas from './Componentes/ListaCitas';
-import LogoContainer from './Estilos/LogoContainerStyled';
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 20px;
-  margin: 20px;
-
-  @media (max-width: 1135px) {
-    grid-template-columns: 1fr;
-    // Cambia esta línea
-    grid-auto-rows: minmax(100px, auto);
-  }
-`;
+import { LogoContainer, ContainerApp } from './Estilos/LogoContainerStyled';
 
 export default function App() {
   // Citas en local storage
@@ -60,10 +46,10 @@ export default function App() {
           <h1>Purrfect Planner</h1>
         </LogoContainer>
       </header>
-      <Container>
+      <ContainerApp>
         <Formulario crearCita={crearCita} />
         <ListaCitas citas={citas} eliminarCita={eliminarCita} />
-      </Container>
+      </ContainerApp>
     </div>
   );
 }

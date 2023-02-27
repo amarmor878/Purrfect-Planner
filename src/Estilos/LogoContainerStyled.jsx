@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const LogoContainer = styled.div`
+export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +17,14 @@ const LogoContainer = styled.div`
   }
 `;
 
-export default LogoContainer;
+export const ContainerApp = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+  margin: 20px;
+
+  @media (max-width: 1135px) {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+  }
+`;

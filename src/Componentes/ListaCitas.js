@@ -1,6 +1,6 @@
 import React from 'react';
 import Cita from './Cita';
-import { ListaContenedor } from '../Estilos/ListaStyled';
+import ListaContenedor from '../Estilos/ListaStyled';
 
 export default function ListaCitas({ citas, eliminarCita }) {
     return (

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ListaContenedor = styled.div`
+const ListaContenedor = styled.div`
   margin: 2rem 0;
   padding: 2rem;
   border: 1px solid #ccc;
@@ -23,3 +23,5 @@ export const ListaContenedor = styled.div`
     font-size: bold;
   }
 `;
+
+export default ListaContenedor;

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const FormularioWrapper = styled.div`
+export const FormularioWrapper = styled.div`
   margin: 2rem 0;
   padding: 2rem;
   border: 1px solid #ccc;
@@ -16,47 +16,57 @@ const FormularioWrapper = styled.div`
   h3 span{
     color: #008CBA;
   }
-
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  input[type='text'],
-  input[type='date'],
-  input[type='email'],
-  textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.2rem;
-  }
-
-  button[type='submit'] {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.2rem;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #00688B;
-    }
-  }
-
+  
   p {
     margin-top: 1rem;
     color: red;
     font-size: 1.2rem;
     font-weight: bold;
   }
-`
-export default FormularioWrapper;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 20px;
+  }
+`;
+
+export const LabelForm = styled.label`
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+`;
+
+export const InputForm = styled.input`
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  width: 100%;
+`;
+
+export const TextAreaForm = styled.textarea`
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  width: 100%;
+`;
+
+export const BotonForm = styled.button`
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #303f9f;
+  }
+`;
