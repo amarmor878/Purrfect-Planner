@@ -28,7 +28,7 @@ La aplicación se encuentra desplegada en Amazon Web Services y se puede acceder
 Para utilizar Purrfect Planner, primero debes clonar el repositorio en tu máquina local. Puedes hacerlo con el siguiente comando:
 
 ```bash
-git clone [https://github.com/tu-usuario/purrfect-planner.git](https://github.com/amarmor878/Purrfect-Planner.git)
+git clone https://github.com/amarmor878/Purrfect-Planner.git
 ```
 Una vez que tengas el repositorio en tu máquina local, debes instalar las dependencias con:
 
