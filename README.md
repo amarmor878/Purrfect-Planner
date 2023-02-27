@@ -25,7 +25,22 @@ La aplicación se encuentra desplegada en Amazon Web Services y se puede acceder
 
 ## Cómo utilizar Purrfect Planner
 
-Para utilizar Purrfect Planner, simplemente debes crear una cuenta en la plataforma y podrás empezar a registrar las citas de tus pacientes.
+Para utilizar Purrfect Planner, primero debes clonar el repositorio en tu máquina local. Puedes hacerlo con el siguiente comando:
+
+```bash
+git clone [https://github.com/tu-usuario/purrfect-planner.git](https://github.com/amarmor878/Purrfect-Planner.git)
+```
+Una vez que tengas el repositorio en tu máquina local, debes instalar las dependencias con:
+
+```bash
+npm install
+```
+
+Luego, puedes iniciar la aplicación con:
+```bash
+npm start
+```
+Después de que la aplicación se inicie, podrás utilizarla en tu navegador web. Asegúrate de tener una conexión a Internet activa.
 
 ## Capturas de la App
 
@@ -37,6 +52,8 @@ Aquí te mostramos algunas capturas de pantalla de la aplicación:
 
 - Documentación oficial de React: [https://reactjs.org/docs/getting-started.html](https://reactjs.org/docs/getting-started.html)
 - Documentación oficial de styled-components: [https://styled-components.com/docs](https://styled-components.com/docs)
+- Documentacion oficial de css grid: [https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout)
+- Documentación oficial de flexbox: [https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
 ## Derechos de autor
 
